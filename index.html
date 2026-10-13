@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roman Facts</title>
+  <meta name="description" content="Emperors, legions, gladiators and engineering that still stands, plus a Roman numeral converter." />
+  <meta property="og:title" content="Roman Facts" />
+  <meta property="og:description" content="Emperors, legions, gladiators and engineering that still stands, plus a Roman numeral converter." />
+  <meta name="theme-color" content="#0c0909" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23b3141a'/><text x='50' y='68' font-size='46' font-family='Georgia' font-weight='bold' text-anchor='middle' fill='%23d4af37'>R</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="romans">
+  <nav class="nav">
+    <a class="brand" href="./">Roman<span>·</span>Facts</a>
+    <div class="links">
+      <a href="https://poptartsmmmgood117-bit.github.io/dino-facts-site/">Dinos</a>
+      <a href="https://poptartsmmmgood117-bit.github.io/viking-facts-site/">Vikings</a>
+      <a href="./" class="active">Romans</a>
+      <a href="#numerals">Numerals</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="ghost-word" aria-hidden="true">SPQR</div>
+    <div class="inner">
+      <p class="kicker">753 BC – AD 1453 · Senatus Populusque Romanus</p>
+      <h1>Veni. Vidi.<br><em>Vici.</em></h1>
+      <p class="tagline">A village of shepherds that became an empire of 50 million people, with roads, laws and concrete that outlived it by two thousand years. Meet <span id="item-count">26</span> emperors, enemies, gods and wonders.</p>
+      <div class="ctas">
+        <a class="btn" href="#roster">Enter the Forum</a>
+        <a class="btn ghost" href="#numerals">Numeral converter</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="alt">
+    <div class="wrap reveal">
+      <p class="kicker">I · Acta Diurna</p>
+      <h2 class="section-title">Random Fact</h2>
+      <div class="fact-box">
+        <p id="fact-text" aria-live="polite"></p>
+        <button class="btn" id="fact-btn">Next fact</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap reveal">
+      <div class="stats">
+        <div class="stat"><div class="num">MMCC</div><div class="lbl">Years from founding to fall</div></div>
+        <div class="stat"><div class="num">5M km²</div><div class="lbl">Empire at its height</div></div>
+        <div class="stat"><div class="num">80,000 km</div><div class="lbl">Paved roads</div></div>
+        <div class="stat"><div class="num">50,000+</div><div class="lbl">Colosseum crowd</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="roster">
+    <div class="wrap">
+      <p class="kicker">II · The Roster</p>
+      <h2 class="section-title">Power &amp; Glory</h2>
+      <p class="section-sub">Emperors, generals, enemies of Rome, its gods and its engineering. Filter, search and open any entry.</p>
+      <div class="controls" id="controls">
+        <input id="search" type="search" placeholder="Search the empire…" aria-label="Search Roman facts" />
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="numerals">
+    <div class="wrap">
+      <p class="kicker">III · Numeri</p>
+      <h2 class="section-title">Numeral Converter</h2>
+      <p class="section-sub">Type a year, your birthday, or a number from a movie's end credits. It works both ways.</p>
+      <div class="tool reveal">
+        <div class="tool-body">
+          <label for="num-input">Number or Roman numerals</label>
+          <input id="num-input" type="text" maxlength="16" autocomplete="off" spellcheck="false" />
+          <div class="row">
+            <div class="seg" role="group" aria-label="Examples">
+              <button data-try="753">Founding</button>
+              <button data-try="1453">Fall</button>
+              <button data-try="MCMLXXXIV">MCMLXXXIV</button>
+              <button data-try="3999">Max</button>
+            </div>
+          </div>
+          <div class="out" id="num-out" aria-live="polite"></div>
+          <p class="note">Today: <b id="today" style="color:var(--accent-2);letter-spacing:.08em"></b>. Romans had no zero, and the "subtract" forms like IV and IX became standard only later. On monuments you'll often see IIII.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <p class="kicker">IV · Annales</p>
+      <h2 class="section-title">Rise &amp; Fall</h2>
+      <p class="section-sub">Two thousand years, from legend to the last emperor.</p>
+      <div class="timeline">
+        <div class="tl-item reveal"><div class="when">753 BC</div><h3>Founding</h3><p>By legend, Romulus founds Rome after killing his twin brother Remus. The two had been raised by a she-wolf.</p></div>
+        <div class="tl-item reveal"><div class="when">509 BC</div><h3>The Republic</h3><p>Rome throws out its last king and becomes a republic led by two elected consuls. For centuries afterwards, Romans hated the word "king".</p></div>
+        <div class="tl-item reveal"><div class="when">218 – 201 BC</div><h3>Hannibal</h3><p>Carthage's greatest general marches elephants over the Alps and destroys Roman armies, but Scipio finally beats him at Zama.</p></div>
+        <div class="tl-item reveal"><div class="when">146 BC</div><h3>Carthage Burns</h3><p>Rome razes Carthage and the same year destroys Corinth. It now dominates the Mediterranean.</p></div>
+        <div class="tl-item reveal"><div class="when">44 BC</div><h3>The Ides of March</h3><p>Julius Caesar, dictator for life, is stabbed 23 times by senators. The Republic dies with him.</p></div>
+        <div class="tl-item reveal"><div class="when">27 BC</div><h3>Augustus</h3><p>Caesar's adopted heir becomes the first emperor. Two centuries of relative peace, the Pax Romana, begin.</p></div>
+        <div class="tl-item reveal"><div class="when">AD 79</div><h3>Vesuvius</h3><p>The volcano buries Pompeii and Herculaneum, preserving a Roman town down to the bread in its ovens.</p></div>
+        <div class="tl-item reveal"><div class="when">AD 117</div><h3>Greatest Extent</h3><p>Under Trajan, the empire stretches from Britain to Mesopotamia.</p></div>
+        <div class="tl-item reveal"><div class="when">AD 476</div><h3>Fall of the West</h3><p>The Germanic general Odoacer deposes the teenage emperor Romulus Augustulus. The Western Empire is gone.</p></div>
+        <div class="tl-item reveal"><div class="when">AD 1453</div><h3>The Last Romans</h3><p>The Eastern Empire, ruled from Constantinople, survives another thousand years until the Ottomans take the city.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">V · Corrections</p>
+      <h2 class="section-title">Myth vs. Fact</h2>
+      <p class="section-sub">What the movies taught you, and what actually happened.</p>
+      <div class="myths">
+        <div class="myth reveal"><div class="label m">Myth</div><p>Thumbs down meant death in the arena.</p><div class="label f">Fact</div><p>Nobody knows which gesture meant what. The famous thumbs-down image comes from an 1872 painting by Jean-Léon Gérôme.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Romans had vomitoriums to throw up during feasts.</p><div class="label f">Fact</div><p>A vomitorium was an exit passage in an amphitheater that "spewed out" the crowd.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Nero fiddled while Rome burned.</p><div class="label f">Fact</div><p>The fiddle wouldn't be invented for another thousand years, and Tacitus says Nero was at Antium when the fire broke out.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Gladiators always fought to the death.</p><div class="label f">Fact</div><p>Gladiators were expensive to train. Many fights ended with a decision, and most fighters survived most bouts.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Roman statues and temples were gleaming white.</p><div class="label f">Fact</div><p>They were painted in bright colors. Most of the paint has worn away, but traces survive.</p></div>
+        <div class="myth reveal"><div class="label m">Myth</div><p>Rome fell in 476.</p><div class="label f">Fact</div><p>Only the West did. The Eastern Roman Empire lasted until 1453, and its people called themselves Romans the whole time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="quiz-section">
+    <div class="wrap">
+      <p class="kicker">VI · Arena</p>
+      <h2 class="section-title">Into the Arena</h2>
+      <p class="section-sub">Eight questions. The crowd decides your fate.</p>
+      <div class="quiz reveal" id="quiz"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="promo reveal">
+        <div>
+          <p class="kicker">Next expedition</p>
+          <h3>Age of Wolves</h3>
+          <p>The raiders who came after Rome. Longships, Norse gods, and a translator that writes your name in runes.</p>
+        </div>
+        <a class="btn" href="https://poptartsmmmgood117-bit.github.io/viking-facts-site/">Vikings →</a>
+      </div>
+      <div class="promo reveal">
+        <div>
+          <p class="kicker">Far older empires</p>
+          <h3>Apex Predators</h3>
+          <p>Before Rome, before anyone: 165 million years of dinosaurs.</p>
+        </div>
+        <a class="btn ghost" href="https://poptartsmmmgood117-bit.github.io/dino-facts-site/">Dinos →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>Roman Facts · SPQR</span>
+      <span><a href="https://poptartsmmmgood117-bit.github.io/dino-facts-site/">Dinos</a><a href="https://poptartsmmmgood117-bit.github.io/viking-facts-site/">Vikings</a></span>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Details">
+    <div class="panel">
+      <button class="close" aria-label="Close">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    window.PAGE = {
+      emptyText: "Nothing found. Lost to history.",
+      filterGroups: [{ name: "Types", values: ["Emperor", "Military", "God", "Life", "Engineering"] }],
+      facts: [
+        "July and August are named after Julius Caesar and Augustus.",
+        "Romans collected urine from public toilets to clean wool. Emperor Vespasian taxed it, and supposedly said: 'Money doesn't stink.'",
+        "Roman sea walls made of concrete actually got stronger over time as seawater reacted with the volcanic ash in the mix.",
+        "The Pantheon's dome, nearly 1,900 years old, is still the largest unreinforced concrete dome in the world.",
+        "Julius Caesar was kidnapped by pirates. He told them to raise their ransom, promised to crucify them, and later did.",
+        "The Circus Maximus could hold over 150,000 chariot racing fans.",
+        "Rome had a daily public news sheet, the Acta Diurna, posted in the Forum from 59 BC.",
+        "Roman numerals have no zero.",
+        "Rich Romans had central heating: hot air from a furnace flowed under raised floors through a system called a hypocaust.",
+        "Gladiators were nicknamed 'barley men' because they ate a mostly plant-based diet to bulk up.",
+        "The Aqua Virgo, built in 19 BC, still feeds Rome's Trevi Fountain.",
+        "Romans used a sponge on a stick, the tersorium, in public toilets.",
+        "A Roman legionary could march about 30 km a day carrying gear weighing over 30 kg.",
+        "The Eastern Roman Empire lasted nearly 1,000 years after the West fell.",
+        "Caligula supposedly planned to make his horse, Incitatus, a consul. The story may be ancient gossip.",
+      ],
+      items: [
+        { name: "Julius Caesar", tags: ["Military"], meaning: "Veni, vidi, vici",
+          fact: "Conquered Gaul, crossed the Rubicon to seize power, and was assassinated by senators on the Ides of March.",
+          stats: "100 – 44 BC · General & dictator",
+          extra: ["He wrote his own war reports, which are still read today.", "His calendar reform, the Julian calendar, lasted over 1,600 years.", "He was stabbed 23 times; according to the doctor who examined him, only one wound was fatal."] },
+        { name: "Augustus", tags: ["Emperor"], meaning: "The revered one",
+          fact: "Rome's first emperor, who claimed he found Rome a city of brick and left it a city of marble.",
+          stats: "Reigned 27 BC – AD 14",
+          extra: ["Born Gaius Octavius, he was Caesar's great-nephew and adopted son.", "He beat Mark Antony and Cleopatra at Actium in 31 BC.", "The month of August is named after him."] },
+        { name: "Trajan", tags: ["Emperor", "Military"], meaning: "Optimus Princeps, best of rulers",
+          fact: "Under him, the empire reached its greatest size: from Britain to the Persian Gulf.",
+          stats: "Reigned AD 98 – 117",
+          extra: ["He was the first emperor born outside Italy, in Hispania.", "Trajan's Column shows his Dacian wars in a carved spiral 190 m long.", "Later Senates wished new emperors to be 'luckier than Augustus, better than Trajan'."] },
+        { name: "Hadrian", tags: ["Emperor", "Engineering"],
+          fact: "Built a wall 117 km long across northern Britain to mark the empire's edge.",
+          stats: "Reigned AD 117 – 138",
+          extra: ["He rebuilt the Pantheon that still stands in Rome.", "He was the first emperor to wear a full beard, starting a fashion.", "He spent more than half his reign touring the provinces."] },
+        { name: "Marcus Aurelius", tags: ["Emperor"], meaning: "The philosopher emperor",
+          fact: "Wrote 'Meditations', private notes on Stoic philosophy, while on campaign against Germanic tribes.",
+          stats: "Reigned AD 161 – 180",
+          extra: ["He wrote Meditations in Greek, not Latin.", "It's still a bestseller today.", "His son Commodus, who followed him, fought in the arena himself."] },
+        { name: "Nero", tags: ["Emperor"],
+          fact: "Ruled during the Great Fire of Rome in AD 64, then built himself a vast golden palace on the ruins.",
+          stats: "Reigned AD 54 – 68",
+          extra: ["He performed as a singer and charioteer, which shocked the elite.", "He blamed the fire on Christians.", "His last words reportedly were 'What an artist dies in me!'"] },
+        { name: "Caligula", tags: ["Emperor"], meaning: "Little boot",
+          fact: "His nickname came from the tiny soldier's boots he wore as a child in army camps.",
+          stats: "Reigned AD 37 – 41",
+          extra: ["He was murdered by his own Praetorian Guard.", "Ancient writers hated him, so some stories may be exaggerated.", "He built two giant pleasure ships on Lake Nemi."] },
+        { name: "Constantine the Great", tags: ["Emperor"],
+          fact: "The first Christian emperor, who refounded the city of Byzantium as Constantinople.",
+          stats: "Reigned AD 306 – 337",
+          extra: ["He won the Battle of the Milvian Bridge in 312.", "Constantinople, today Istanbul, was Rome's capital for over a thousand years.", "The Edict of Milan (313) made Christianity legal."] },
+        { name: "Scipio Africanus", tags: ["Military"],
+          fact: "The general who finally defeated Hannibal, at the Battle of Zama in 202 BC.",
+          stats: "236 – 183 BC",
+          extra: ["He earned 'Africanus' for his victory in Africa.", "He studied Hannibal's own tactics and used them against him.", "He later faced corruption charges and retired bitterly from Rome."] },
+        { name: "Hannibal Barca", tags: ["Military"], meaning: "Rome's greatest enemy",
+          fact: "Marched an army with war elephants over the Alps and nearly destroyed Rome.",
+          stats: "247 – c. 183 BC · Carthage",
+          extra: ["At Cannae in 216 BC he surrounded and wiped out a far larger Roman army.", "He fought in Italy for 15 years.", "As a boy he swore an oath of eternal hostility to Rome."] },
+        { name: "Spartacus", tags: ["Military"],
+          fact: "An escaped gladiator who led a slave army that beat several Roman armies.",
+          stats: "Revolt of 73 – 71 BC",
+          extra: ["His army may have grown to over 70,000 people.", "After his defeat, 6,000 captives were crucified along the Appian Way.", "He became a symbol of freedom for later revolutionaries."] },
+        { name: "Boudica", tags: ["Military"],
+          fact: "A British queen whose revolt burned Londinium, Camulodunum and Verulamium.",
+          stats: "Revolt of AD 60 – 61 · Iceni tribe",
+          extra: ["She rebelled after Romans seized her kingdom and flogged her.", "Her army was finally beaten by a much smaller Roman force.", "Her statue stands by the Houses of Parliament in London."] },
+        { name: "Gaius Marius", tags: ["Military"],
+          fact: "Reshaped the Roman army into a professional force and was elected consul seven times.",
+          stats: "157 – 86 BC",
+          extra: ["His soldiers carried their own gear and were called 'Marius' mules'.", "He made the eagle the standard of every legion.", "His rivalry with Sulla led to civil war."] },
+        { name: "The Legion", tags: ["Military"],
+          fact: "About 5,000 heavy infantry, trained to march, dig and fight with brutal discipline.",
+          extra: ["They built a fortified camp at the end of every day's march.", "The testudo (tortoise) formation locked shields on all sides and overhead.", "Losing the legion's eagle standard was the ultimate disgrace."] },
+        { name: "Jupiter", tags: ["God"], meaning: "King of the gods",
+          fact: "God of the sky and thunder, whose great temple sat on the Capitoline Hill.",
+          extra: ["Victorious generals ended their triumphs at his temple.", "He matches the Greek god Zeus.", "The planet Jupiter is named after him."] },
+        { name: "Mars", tags: ["God"], meaning: "God of war",
+          fact: "Father of Romulus and Remus, which in Roman belief made Romans the children of war.",
+          extra: ["The month of March is named after him.", "The Campus Martius (Field of Mars) was where the army trained.", "He was far more important to Romans than Ares was to Greeks."] },
+        { name: "Janus", tags: ["God"], meaning: "The two-faced god",
+          fact: "God of doorways and beginnings, with one face looking to the past and one to the future.",
+          extra: ["January is named after him.", "The doors of his temple stood open in war and closed in peace.", "They were closed only a handful of times in Roman history."] },
+        { name: "Vesta", tags: ["God"], meaning: "Goddess of the hearth",
+          fact: "Her sacred flame was kept burning by the Vestal Virgins, the only full-time female priesthood in Rome.",
+          extra: ["If the flame went out, a Vestal could be whipped.", "A Vestal who broke her vow was buried alive.", "Vestals could pardon a condemned prisoner they met by chance."] },
+        { name: "Gladiators", tags: ["Life"],
+          fact: "Trained fighters who were often celebrities, with fan graffiti scrawled on the walls of Pompeii.",
+          extra: ["There were many types, like the net-and-trident retiarius and the heavily armored murmillo.", "Most were slaves or prisoners, but some free men volunteered.", "Bones from a gladiator cemetery in Ephesus show they drank a plant-ash drink, possibly for strength."] },
+        { name: "The Colosseum", tags: ["Engineering", "Life"],
+          fact: "Opened in AD 80 with 100 days of games, it could seat 50,000 or more.",
+          extra: ["A huge awning, the velarium, shaded the crowd, worked by sailors.", "Under the floor, the hypogeum held lifts to raise animals into the arena.", "Its real name was the Flavian Amphitheater."] },
+        { name: "Roman Concrete", tags: ["Engineering"],
+          fact: "Made with volcanic ash, it has survived 2,000 years, sometimes underwater.",
+          extra: ["Lumps of lime in the mix help it heal its own cracks.", "Seawater actually grew new minerals that strengthened harbor concrete.", "Modern engineers are still studying how to copy it."] },
+        { name: "The Roads", tags: ["Engineering"],
+          fact: "Over 80,000 km of paved roads tied the empire together, and some are still in use.",
+          extra: ["The Appian Way was begun in 312 BC.", "Milestones marked distances all the way back to Rome.", "Roads were built in layers, with a curved surface to drain rain."] },
+        { name: "Aqueducts", tags: ["Engineering"],
+          fact: "Eleven aqueducts brought fresh water into Rome, moved by gravity alone.",
+          extra: ["Some dropped only a few centimeters per hundred meters over many kilometers.", "Most of their length ran underground.", "The Pont du Gard in France stands almost 50 m tall."] },
+        { name: "The Baths", tags: ["Life", "Engineering"],
+          fact: "Public baths were gyms, spas, libraries and social clubs all in one.",
+          extra: ["The Baths of Caracalla covered about 25 acres.", "Bathers moved from warm to hot to cold pools.", "Entry was cheap, so nearly everyone went."] },
+        { name: "Food & Feasts", tags: ["Life"],
+          fact: "The favorite flavor was garum, a sauce made from fermented fish.",
+          extra: ["Rich diners ate lying on couches.", "There were no tomatoes, potatoes or chocolate; those came from the Americas.", "Street food bars, thermopolia, served hot food to people without kitchens."] },
+        { name: "Pompeii", tags: ["Life"],
+          fact: "Buried by Vesuvius in AD 79, it's a Roman town frozen in time.",
+          extra: ["Walls are covered in graffiti: election ads, jokes and insults.", "Carbonized loaves of bread were found still in an oven.", "Plaster casts preserve the shapes of victims."] },
+      ],
+      quiz: [
+        { q: "Which river did Caesar cross to start a civil war?", options: ["Tiber", "Rubicon", "Rhine", "Danube"], answer: 1, why: "'The die is cast,' he said, in 49 BC." },
+        { q: "Who was Rome's first emperor?", options: ["Julius Caesar", "Nero", "Augustus", "Romulus"], answer: 2, why: "Augustus took power in 27 BC. Caesar was dictator, never emperor." },
+        { q: "What is 2026 in Roman numerals?", options: ["MMXXVI", "MMXXIV", "MCMXXVI", "MMXVI"], answer: 0, why: "MM (2000) + XX (20) + VI (6)." },
+        { q: "Which general crossed the Alps with elephants?", options: ["Scipio", "Spartacus", "Hannibal", "Marius"], answer: 2, why: "Hannibal of Carthage, in 218 BC." },
+        { q: "What was a vomitorium?", options: ["A room for vomiting at feasts", "An exit passage in an arena", "A medical clinic", "A bathhouse pool"], answer: 1, why: "It 'spewed out' crowds. Nothing to do with feasts." },
+        { q: "Which month is named after the Roman god of war?", options: ["January", "March", "May", "June"], answer: 1, why: "March comes from Mars." },
+        { q: "When did the Eastern Roman Empire fall?", options: ["AD 476", "AD 800", "AD 1066", "AD 1453"], answer: 3, why: "The Ottomans took Constantinople in 1453." },
+        { q: "What buried Pompeii in AD 79?", options: ["An earthquake", "A tsunami", "Vesuvius", "Barbarians"], answer: 2, why: "The volcano buried the town under ash and pumice." },
+      ],
+      quizPerfect: "The crowd roars. Freedom is yours.",
+      quizDone: "The crowd is undecided. Fight again.",
+    };
+  </script>
+  <script src="site.js"></script>
+  <script src="numerals.js"></script>
+</body>
+</html>
